@@ -11,15 +11,29 @@ namespace Host.Nile
         static void Main( string[] args )
         {
             // add, list, alist
+            GetInput();
 
         }
-        static void DisplayMenu (string[] args) // modifier should be static  
+        static char GetInput() // modifier should be static  // void has no return type 
         {
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
+            while (true)
+            { 
+            Console.WriteLine("A)dd Product");
+            Console.WriteLine("L)ist Products");
+            Console.WriteLine("Q)uit");
 
+
+            string input = Console.ReadLine();
+            if (input == "A")
+                return 'A';
+            else if (input == "L")
+                return 'L';
+            else if (input == "Q")
+                return 'Q';
+
+                //Error
+                Console.WriteLine("Please choose a valid option");
+            }
         }
     }
       
