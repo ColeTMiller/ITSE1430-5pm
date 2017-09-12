@@ -8,7 +8,7 @@ namespace lab_Cole_Miller
 {
     class Program
     {
-        static void Main( string[] args )
+        static void Main( string[] args)
         {
             bool quit = false;
             do
@@ -17,21 +17,37 @@ namespace lab_Cole_Miller
                 switch (choice)
                 {
                     case '1':
-                    AddMovie(string[] args);
+                    AddMovie();
                     break;
 
                     case '2':
-                    ListMovie(string[] args);
+                    ListMovie();
                     break;
 
                     case '3':
-                    DeleteMovie(string[] args);
+                    DeleteMovie();
                     break;
 
                     case '4': quit = true; break;
                 }
             } while (!quit);
         }
+
+        private static void DeleteMovie()
+        {
+            ;
+        }
+
+        private static void ListMovie()
+        {
+            ;
+        }
+
+        private static void AddMovie()
+        {
+            ;
+        }
+
         static char MovieSelection()
         {
             while (true)
@@ -43,31 +59,25 @@ namespace lab_Cole_Miller
                 Console.WriteLine("4. Quit Program");
 
                 string input = Console.ReadLine();
-                char letter = Char.ToUpper(input[0]);
-                if (input == '1')
-                    return AddMovie(string[] args);
-                else if (input == '2')
-                    return ListMovies(string[] args);
-                else if (input == '3')
-                    return DeleteMovie(string[] args);
+                if (input !=null && input.Length !=0)
+                {
+                    if (string.Compare(input, '1', true) == 0)
+                        return AddMovie();
+                    if (input == '1')
+                        return AddMovie();
+                    else if (input == '2')
+                        return ListMovies();
+                    else if (input == '3')
+                        return DeleteMovie();
 
                 // Error
                 Console.WriteLine("Please Choose a valid option");
             }
         }
-        static int AddMovie(string[] args)
-        {
-
-        }
         
-        static int ListMovie(string[] args)
-        {
-
-        }
-        static int DeleteMovie( string args)
-        {
-
-        }
+        
+        
+        
     }
     
 }
