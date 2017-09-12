@@ -43,10 +43,10 @@ namespace Host.Nile
             Price = Console.ReadLine();
 
             Console.Write("Enter optional description: ");
-            productDescription= Console.ReadLine().Trim();
+            Description= Console.ReadLine().Trim();
 
             Console.WriteLine("Is it discontinued (Y/N): ");
-            bool discontinued = Console.ReadLine().Trim(); 
+            Discontinued = Console.ReadLine().Trim(); 
         }
         private static void ListProduct()
         {
@@ -57,7 +57,7 @@ namespace Host.Nile
             while (true)
             {
                 Console.WriteLine("Main Menu");
-                Console.WriteLine("".PadLeft(10,));
+                Console.WriteLine("".PadLeft(10));
                   Console.WriteLine("A)dd Product");
                   Console.WriteLine("L)ist Products");
                   Console.WriteLine("Q)uit");
@@ -77,9 +77,9 @@ namespace Host.Nile
                     if (string.Compare(input, "A", true) == 0)
                         return 'A';
                     //char comparison
-                    else if (letter == "L")
+                    else if (string.Compare(input, "L", true) == 0)
                         return 'L';
-                    else if (letter == "Q")
+                    else if (string.Compare(input, "Q", true) == 0)
                         return 'Q';
                 }
                 //Error
