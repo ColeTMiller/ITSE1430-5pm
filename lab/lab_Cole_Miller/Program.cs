@@ -35,27 +35,30 @@ namespace lab_Cole_Miller
 
         private static void DeleteMovie()
         {
-            ;
-        }
 
+            Name = Name.Remove(Name,Description);
+        }
         private static void ListMovie()
         {
             Console.WriteLine(Name);
             Console.WriteLine(Description);
             Console.WriteLine(Time);
-            Console.WriteLine(OWN);
+            Console.WriteLine(Own);
         }
 
         private static void AddMovie()
         {
-            Console.WriteLine("Enter Movie Name: ");
+            Console.WriteLine("Enter Movie Name:");
             Name = Console.ReadLine().Trim();
-            Console.WriteLine("Enter description of Movie: ");
+
+            Console.WriteLine("Enter description of Movie:");
             Description = Console.ReadLine().Trim();
-            Console.WriteLine("Enter how long the movie is: ");
+
+            Console.WriteLine("Enter how long it is:");
             Time = Console.ReadLine().Trim();
-            Console.WriteLine("Do you own this movie: ");
-            OWN = Console.ReadLine().Trim(); 
+
+            Console.WriteLine("Do you own this movie:");
+            Own = Console.ReadLine().Trim(); 
 
         }
 
@@ -70,7 +73,6 @@ namespace lab_Cole_Miller
                 Console.WriteLine("4. Quit Program");
 
                 string input = Console.ReadLine();
-                
                 if (input != null && input.Length != 0)
                 {
                     if (string.Compare(input, "1", true) == 0)
@@ -86,11 +88,13 @@ namespace lab_Cole_Miller
                 Console.WriteLine("Please Choose a valid option");
             }
         }
-        // Keeping the information the user gives us 
-       static string Name;
-       static string Description;
-       static decimal Time;
-       static bool OWN;
+           
+        // keeping the information the user gives us
+        static string Name;
+        static string Description;
+        static decimal Time;
+        static bool Own;
+            
         
         
         
