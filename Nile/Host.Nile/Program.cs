@@ -40,13 +40,13 @@ namespace Host.Nile
             // Ensure not empty
 
             Console.Write("Enter price (>0): ");
-            Price = Console.ReadLine();
+            Price = Console.ReadLine().Trim();
 
             Console.Write("Enter optional description: ");
-            productDescription= Console.ReadLine().Trim();
+            Description= Console.ReadLine().Trim();
 
             Console.WriteLine("Is it discontinued (Y/N): ");
-            bool discontinued = Console.ReadLine().Trim(); 
+            Discontinued = Console.ReadLine().Trim(); 
         }
         private static void ListProduct()
         {
