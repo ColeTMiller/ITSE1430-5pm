@@ -35,15 +35,19 @@ namespace lab_Cole_Miller
 
         private static void DeleteMovie()
         {
-
-            Name = Name.Remove(Name,Description);
+            Console.WriteLine("Do you want to Delete this move:");
+            
+            
         }
         private static void ListMovie()
         {
-            Console.WriteLine(Name);
-            Console.WriteLine(Description);
-            Console.WriteLine(Time);
-            Console.WriteLine(Own);
+            if () 
+            {
+                Console.WriteLine(Name);
+                Console.WriteLine(Description);
+                Console.WriteLine(Time);
+                Console.WriteLine(Own);
+            }
         }
 
         private static void AddMovie()
@@ -55,10 +59,10 @@ namespace lab_Cole_Miller
             Description = Console.ReadLine().Trim();
 
             Console.WriteLine("Enter how long it is:");
-            Time = Console.ReadLine().Trim();
+             Time = ReadDecimal();
 
             Console.WriteLine("Do you own this movie:");
-            Own = Console.ReadLine().Trim(); 
+            Own = ReadYesorNo(); ; 
 
         }
 
@@ -67,12 +71,16 @@ namespace lab_Cole_Miller
             while (true)
             {
                 Console.WriteLine("What selection would you like to make:");
+                Console.WriteLine("".PadLeft(10));
                 Console.WriteLine("1. Add a Movie");
                 Console.WriteLine("2. List Movies");
                 Console.WriteLine("3. Delete Movie");
                 Console.WriteLine("4. Quit Program");
+                Console.WriteLine("Enter (1-4): ");
+                Console.WriteLine("".PadLeft(10));
 
-                string input = Console.ReadLine();
+              
+                var input = Console.ReadLine();
                 if (input != null && input.Length != 0)
                 {
                     if (string.Compare(input, "1", true) == 0)
@@ -88,16 +96,53 @@ namespace lab_Cole_Miller
                 Console.WriteLine("Please Choose a valid option");
             }
         }
-           
+        /// <summary>
+        /// Read the Decimal in time Format</summary>
+        /// <returns> the  decimal value</returns>
+        static decimal ReadDecimal()
+        {
+            do
+            {
+                var input = Console.ReadLine();
+
+                
+                if (Decimal.TryParse(input, out var result))
+                    return result;
+
+                Console.Write("Enter a valid decimal");
+             } while (true);
+        }
+        /// <summary>reads a boolean fromConsole </summary>
+        /// <returns></returns>
+        static bool ReadYesorNo()
+        {
+            do
+            {
+                string input = Console.ReadLine();
+                if (!String.IsNullOrEmpty(input))
+                {
+                    switch (Char.ToUpper(input[0]))
+                    {
+                        case 'Y':
+                        return true;
+                        case 'N':
+                        return false;
+                    }
+                }
+                Console.Write("Enter either Y or N");
+            } while (true);
+        }
         // keeping the information the user gives us
         static string Name;
         static string Description;
         static decimal Time;
         static bool Own;
+    }          
+         
             
         
         
         
-    }
+}
     
 }

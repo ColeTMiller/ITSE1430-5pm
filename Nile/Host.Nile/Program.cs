@@ -39,23 +39,38 @@ namespace Host.Nile
 
             // Ensure not empty
 
-            Console.Write("Enter price (>0): ");
-            Price = Console.ReadLine().Trim();
+            Console.Write("Enter price (>0):$ ");
+             Price = ReadDecimal();
 
             Console.Write("Enter optional description: ");
             Description= Console.ReadLine().Trim();
 
             Console.WriteLine("Is it discontinued (Y/N): ");
-            Discontinued = Console.ReadLine().Trim(); 
+            Discontinued = ReadYesNo(); 
         }
         private static void ListProduct()
         {
-            throw new NotImplementedException();
+            // Name $price (Discontinued)
+            // Description
+            // Example 1
+            // string msg = String.Format("{0}\t\t\t{1}\t\t[{2}]",Name, Price
+            //,Discontinued ?"Discontinued" : "");
+
+            // Example 2
+            // Console.WriteLine({0}\t\t\t{1}\t\t[{2}]",Name, Price
+            //,Discontinued ? "[Discontinued]" : "");
+
+            // Example 3
+            string msg = $"{Name}\t\t\t {Price}\t\t{(Discontinued ? "[Discontinued]" : "")}";
+            Console.WriteLine(msg);
+            Console.WriteLine();
+            Console.WriteLine(Description); 
         }
         static char GetInput() // modifier should be static  // void has no return type 
         {
             while (true)
             {
+                Console.WriteLine();
                 Console.WriteLine("Main Menu");
                 Console.WriteLine("".PadLeft(10));
                   Console.WriteLine("A)dd Product");
@@ -87,6 +102,45 @@ namespace Host.Nile
             }
         }
 
+        /// <summary> Read a decimal from Console.</summary>
+        /// <returns>the decimal value.</returns>
+        static decimal ReadDecimal()
+        {
+            do
+            {
+                var input = Console.ReadLine();
+
+                if (Decimal.TryParse(input, out var result))
+                    return result;
+
+                Console.Write("Enter a valid decimal");
+            } while (true); 
+        }
+
+        /// <summary>
+        /// reads a boolean from Console.</summary>
+        /// <returns></returns>
+        static bool ReadYesNo()
+        {
+            do
+            {
+                string input = Console.ReadLine();
+
+                if (!String.IsNullOrEmpty(input))
+                {
+                    switch (Char.ToUpper(input[0]))
+                    {
+                        case 'Y':
+                        return true;
+                        case 'N':
+                        return false;
+                    }
+
+                }
+                
+                 Console.Write("Enter either Y or N");
+            } while (true);
+        }
         // product goes
         static string  Name;
         static decimal Price;
