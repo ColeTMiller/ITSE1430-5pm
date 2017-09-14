@@ -29,7 +29,18 @@ namespace Host.Nile
                     case 'Q': quit = true; break; 
                     
                 };
-            } while (!quit);  
+            } while (!quit);
+
+            // value type
+            int value1 = 10;
+            Program program = new Program();
+
+
+            var areEqual1 = value1 == 10;
+            var areEqual2 = program == program;
+            var areEqual3 = program == new Program(); 
+
+
         }
 
         private static void AddProduct()
@@ -139,6 +150,21 @@ namespace Host.Nile
                 }
                 
                  Console.Write("Enter either Y or N");
+            } while (true);
+        }
+        static string ReadString(string errorMessage, bool allowEmpty)
+        {
+            if (errorMessage == null)
+                errorMessage = "Enter a vaild string";
+            do
+            {
+                var input = Console.ReadLine();
+                if (String.IsNullOrEmpty(input) && allowEmpty)
+                    return "";
+                else if (!String.IsNullOrEmpty(input))
+                    return input;
+
+                Console.WriteLine("Enter as string")
             } while (true);
         }
         // product goes
