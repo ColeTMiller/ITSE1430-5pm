@@ -154,8 +154,15 @@ namespace Host.Nile
         }
         static string ReadString(string errorMessage, bool allowEmpty)
         {
-            if (errorMessage == null)
-                errorMessage = "Enter a vaild string";
+            //if (errorMessage == null)
+            //errorMessage = "Enter a vaild string";
+            // Null coalesce
+            //errorMessage = errorMessage ?? "Enter a valid string"; 
+            //else 
+            //errorMessage = errorMesage.Trim();
+
+            // null conditional 
+            errorMessage = errorMessage ? .Trim();
             do
             {
                 var input = Console.ReadLine();
