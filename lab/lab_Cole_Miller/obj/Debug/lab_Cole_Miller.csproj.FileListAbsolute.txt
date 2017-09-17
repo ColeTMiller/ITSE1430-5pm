@@ -4,3 +4,10 @@ C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\lab\lab_Cole_Miller\bin\Debug\
 C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\lab\lab_Cole_Miller\bin\Debug\lab_Cole_Miller.pdb
 C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\lab\lab_Cole_Miller\obj\Debug\lab_Cole_Miller.exe
 C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\lab\lab_Cole_Miller\obj\Debug\lab_Cole_Miller.pdb
+C:\Users\Cole\source\repos\lab\lab_Cole_Miller\obj\Debug\lab_Cole_Miller.csprojResolveAssemblyReference.cache
+C:\Users\Cole\source\repos\lab\lab_Cole_Miller\obj\Debug\lab_Cole_Miller.csproj.CoreCompileInputs.cache
+C:\Users\Cole\source\repos\lab\lab_Cole_Miller\obj\Debug\lab_Cole_Miller.exe
+C:\Users\Cole\source\repos\lab\lab_Cole_Miller\obj\Debug\lab_Cole_Miller.pdb
+C:\Users\Cole\source\repos\lab\lab_Cole_Miller\bin\Debug\lab_Cole_Miller.exe.config
+C:\Users\Cole\source\repos\lab\lab_Cole_Miller\bin\Debug\lab_Cole_Miller.exe
+C:\Users\Cole\source\repos\lab\lab_Cole_Miller\bin\Debug\lab_Cole_Miller.pdb

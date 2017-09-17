@@ -10,13 +10,13 @@ namespace lab_Cole_Miller
     {
         static void Main( string[] args)
         {
-            bool quit = false;
+            bool quit = false;                                                                              
             do
             {
-                char choice = MovieSelection();
-                switch (choice)
+                char choice = MovieSelection();                                                     
+                switch (choice)                                                                 // converting the switch into the choices the user wants to pick 
                 {
-                    case '1':
+                    case '1':                                                                         
                     AddMovie();
                     break;
 
@@ -33,24 +33,28 @@ namespace lab_Cole_Miller
             } while (!quit);
         }
 
-        private static void DeleteMovie()
+        private static void DeleteMovie()                                               // does the user want to delete the movie or not
         {
-            Console.WriteLine("Do you want to Delete this move:");
+            Console.WriteLine("Do you want to delete this movie (Y/N):");
+                Delete = MovieDelete();
             
             
-        }
-        private static void ListMovie()
-        {
-            if () 
-            {
-                Console.WriteLine(Name);
-                Console.WriteLine(Description);
-                Console.WriteLine(Time);
-                Console.WriteLine(Own);
-            }
         }
 
-        private static void AddMovie()
+        
+
+        private static void ListMovie()                                             // listing the movie and information the user puts in
+        {
+            
+           
+                Console.WriteLine(Name);
+                Console.WriteLine(Description);
+                Console.WriteLine(Time );
+                Console.WriteLine(Own);
+           
+        }
+
+        private static void AddMovie()                                              // asking the user to enter the movie information they want to put in
         {
             Console.WriteLine("Enter Movie Name:");
             Name = Console.ReadLine().Trim();
@@ -58,7 +62,7 @@ namespace lab_Cole_Miller
             Console.WriteLine("Enter description of Movie:");
             Description = Console.ReadLine().Trim();
 
-            Console.WriteLine("Enter how long it is:");
+            Console.WriteLine("Enter how minuates the movie last: ");
              Time = ReadDecimal();
 
             Console.WriteLine("Do you own this movie:");
@@ -66,8 +70,8 @@ namespace lab_Cole_Miller
 
         }
 
-        static char MovieSelection()
-        {
+        static char MovieSelection()                                                // displaying the choices the user must make in order 
+        {                                                                                               // to Add Movie, List movie, Delete Movie, or  Quit program
             while (true)
             {
                 Console.WriteLine("What selection would you like to make:");
@@ -81,7 +85,7 @@ namespace lab_Cole_Miller
 
               
                 var input = Console.ReadLine();
-                if (input != null && input.Length != 0)
+                if (input != null && input.Length != 0)                                                 // turning  a user input into a string then into a validation process
                 {
                     if (string.Compare(input, "1", true) == 0)
                         return '1';
@@ -99,7 +103,7 @@ namespace lab_Cole_Miller
         /// <summary>
         /// Read the Decimal in time Format</summary>
         /// <returns> the  decimal value</returns>
-        static decimal ReadDecimal()
+        static decimal ReadDecimal()                                    
         {
             do
             {
@@ -132,11 +136,35 @@ namespace lab_Cole_Miller
                 Console.Write("Enter either Y or N");
             } while (true);
         }
+        private static bool MovieDelete()
+        {
+            do
+            {
+
+
+                string input = Console.ReadLine();
+                if (!String.IsNullOrEmpty(input))
+                {
+                    switch (Char.ToUpper(input[0]))
+                    {
+                        case 'Y':
+                       return true;
+                        case 'N':
+                        return false;
+                      }
+                }
+            } while (true);
+            List<string> Name = new List<string>();
+            List<string> Description = new List<string>();
+            List<decimal> Time = new List<decimal>();
+            List<bool> Own = new List<bool>();
+        }
         // keeping the information the user gives us
         static string Name;
         static string Description;
         static decimal Time;
         static bool Own;
+        static bool Delete;
     }          
          
             
@@ -145,4 +173,4 @@ namespace lab_Cole_Miller
         
 }
     
-}
+
