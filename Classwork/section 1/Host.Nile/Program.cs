@@ -156,13 +156,15 @@ namespace Host.Nile
         {
             //if (errorMessage == null)
             //errorMessage = "Enter a vaild string";
-            // Null coalesce
-            //errorMessage = errorMessage ?? "Enter a valid string"; 
-            //else 
-            //errorMessage = errorMesage.Trim();
+            // else 
+            // errorMessage = errorMessage.Trim();
 
+            // Null coalesce 
+            //errorMessage = errorMessage ?? "Enter a valid string"; 
+          
             // null conditional 
-            errorMessage = errorMessage ? .Trim();
+            errorMessage = errorMessage?.Trim();
+
             do
             {
                 var input = Console.ReadLine();
