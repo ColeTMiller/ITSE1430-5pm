@@ -32,11 +32,15 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(547, 261);
+            this.Font = new System.Drawing.Font("MT Extra", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.KeyPreview = true;
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Form";
             this.ResumeLayout(false);
 
         }
