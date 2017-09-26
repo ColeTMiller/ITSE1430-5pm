@@ -9,3 +9,4 @@ C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\section 2\Nile.Windo
 C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\section 2\Nile.Windows\obj\Debug\Nile.Windows.csproj.GenerateResource.Cache
 C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\section 2\Nile.Windows\obj\Debug\Nile.Windows.exe
 C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\section 2\Nile.Windows\obj\Debug\Nile.Windows.pdb
+C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\section 2\Nile.Windows\obj\Debug\Nile.Windows.ProductDeatailForm.resources
