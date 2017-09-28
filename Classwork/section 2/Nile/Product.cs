@@ -48,7 +48,10 @@ namespace Nile
         /// <summary>Determines if discontinued</summary>
         public bool IsDiscontinued { get; set; }
 
-
+        public override string ToString()
+       {
+            return Name; 
+        }
         /// <summary>gets the discounted price, if applicabel. </summary>
         public decimal DiscuntedPrice
         {
@@ -61,14 +64,30 @@ namespace Nile
                 return Price;
             }
         }
+        /// <summary>
+        /// Validates the object 
+        /// </summary>
+        /// <reutrn> The error message or null</reutrn>
+        public virtual string Validate()
+        {
+            // Name cannot be empty
+            if (String.IsNullOrEmpty(Name))
+                return "Name cannot be empty";
+            //Price >= 0; 
+            if (Price < 0)
+                return "Price must be >= 0.";
 
-        public int ICanOnlySetIt { get; private set; }
-        public int ICanOnlySetIt2 { get; }
+            return null; 
 
+        }
+       // public int ICanOnlySetIt { get; private set; }
+       // public int ICanOnlySetIt2 { get; }
+
+        
         private string _name;
         private string _description;
 
-        private readonly double _someValueICannotChange = 10; 
+        //private readonly double _someValueICannotChange = 10; 
 
     }
 }
