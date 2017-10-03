@@ -82,6 +82,27 @@ namespace Nile.Windows
             //Product.Price = GetPrice();   
             return 0; 
         }
+        private void ProductDetailForm_FormCanceling( object sender, FormClosingEventArgs e)
+        {
+            // Please no
+            // var form = (Form)sender;
+            //Please yes
+            var form = sender as Form; 
+
+            // casting for vlaue types
+            if (sender is int)
+            {
+                var intValue2 = (int)sender; 
+            };
+            // Pattern matching
+            if (sender is int intValue)
+            {
+
+            }; 
+
+            if (MessageBox.Show(this, "Are you sure?", "Closing", MessageBoxButtons.YesNo) == DialogResult.No)
+            e.Cancel = true; 
+        }
         private void OnCancel( object sender, EventArgs e )
         {
             this.DialogResult = DialogResult.Cancel; 
