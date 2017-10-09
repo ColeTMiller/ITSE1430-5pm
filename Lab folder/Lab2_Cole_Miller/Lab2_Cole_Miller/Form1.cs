@@ -41,5 +41,10 @@ namespace Lab2_Cole_Miller
         {
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
