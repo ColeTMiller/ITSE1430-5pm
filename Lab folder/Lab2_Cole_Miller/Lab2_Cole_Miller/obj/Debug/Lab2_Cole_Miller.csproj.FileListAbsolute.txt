@@ -1,9 +1,0 @@
-c:\users\cole.miller218\documents\visual studio 2017\Projects\Lab2_Cole_Miller\Lab2_Cole_Miller\bin\Debug\Lab2_Cole_Miller.exe.config
-c:\users\cole.miller218\documents\visual studio 2017\Projects\Lab2_Cole_Miller\Lab2_Cole_Miller\bin\Debug\Lab2_Cole_Miller.exe
-c:\users\cole.miller218\documents\visual studio 2017\Projects\Lab2_Cole_Miller\Lab2_Cole_Miller\bin\Debug\Lab2_Cole_Miller.pdb
-c:\users\cole.miller218\documents\visual studio 2017\Projects\Lab2_Cole_Miller\Lab2_Cole_Miller\obj\Debug\Lab2_Cole_Miller.csprojResolveAssemblyReference.cache
-c:\users\cole.miller218\documents\visual studio 2017\Projects\Lab2_Cole_Miller\Lab2_Cole_Miller\obj\Debug\Lab2_Cole_Miller.Form1.resources
-c:\users\cole.miller218\documents\visual studio 2017\Projects\Lab2_Cole_Miller\Lab2_Cole_Miller\obj\Debug\Lab2_Cole_Miller.Properties.Resources.resources
-c:\users\cole.miller218\documents\visual studio 2017\Projects\Lab2_Cole_Miller\Lab2_Cole_Miller\obj\Debug\Lab2_Cole_Miller.csproj.GenerateResource.Cache
-c:\users\cole.miller218\documents\visual studio 2017\Projects\Lab2_Cole_Miller\Lab2_Cole_Miller\obj\Debug\Lab2_Cole_Miller.exe
-c:\users\cole.miller218\documents\visual studio 2017\Projects\Lab2_Cole_Miller\Lab2_Cole_Miller\obj\Debug\Lab2_Cole_Miller.pdb
