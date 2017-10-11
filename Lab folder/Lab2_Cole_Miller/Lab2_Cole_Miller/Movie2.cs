@@ -12,12 +12,26 @@ namespace Lab2_Cole_Miller
 {
     public partial class Movie2 : Form
     {
-        public Movie2()
+        #region
+        public Movie2() //: base 
         {
             InitializeComponent();
         }
-
+        public Movie2( string title ) : this()
+        {
+            Text = title; 
+        }
+        public Movie2(string title, Program Program ) : this(title)
+        {
+            Program = Program;
+        }
+        #endregion
         private void Movie2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click( object sender, EventArgs e )
         {
 
         }
