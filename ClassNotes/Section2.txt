@@ -1,0 +1,212 @@
+Control 
+	- text 
+		{
+			- it lets the user see what to choose on 
+			- every control has it  
+		}
+	- Name
+		{
+			- is your key
+			- is also the 
+		}
+			
+Child Form 
+	- every Form has a parent 
+	- every child should have a parent form 
+	- parent---> child 
+		- modals 
+			- the person can not get back to the parent windows 
+			- it blocks the user 
+			- forcing the user to make a user 
+			- make a decision or cancel 
+		- modeless 
+			- two windows open the user can interact with both 
+			- tool widows are these 
+
+form 
+	{
+		-	show dalog ()
+			- model 
+		- 	Show( )
+			- modeless 
+	}
+close 
+	{
+		- call close the form does this
+	}
+Name
+	{
+		- is unter control 
+		
+show dialog() ---> Dialog Result
+						
+						0k
+						cancel
+						yes
+						no
+get value of text box 
+	- Text
+	-  Name control 
+		{
+			- it controls the field property 
+			- has a unique name, design time to; 
+		}
+2. Show a child form in modey
+	{
+		- show dialog mode 
+		- // in modeless form us Show
+		- cancel dialog 
+		- name.cancel 
+	}
+3. 
+	{
+	 chld form the Return value of showDialog 
+	)
+
+Class 
+ {
+	Validate an object
+	name has to be unique 
+	has to be your responible 
+ }
+Base Class 
+	{
+		gett he basics stuff 
+		and expand it in our form 
+	}
+Constructor 
+{
+- has the same name as type 
+- no return type 
+- var char = new_T()
+	-1. Allociates memory 
+		new 
+		- allocates enough memory for that type of memory
+		-  or the number of fields 
+	-2.initaties fields 
+		- calls of the object 
+	-3. call the consturctor 
+		- reference back to the var char. 
+- public Product ()
+	{
+		// Cross field initialization 
+		- only use .base();  if you are calling it in somewhere else 
+	}
+- protected 
+	{
+		- drive types see it as public 
+		- every once else see it has private
+		- combinning of public and private 
+	}
+- virtual 
+	- you can also use abstract
+	
+-Constructor chaining 
+	{
+		- chain a consturctor call to another constructor
+	}
+example 
+	-  this calls the current object
+	- base to use the base 
+	- con hello(Command)_Command
+		public Hello COmmand () : base("Hello")
+		{
+		}
+	- public virtual void DoWork() 
+	{
+			
+			public override DoWork()
+			{
+			base.DoWork(); 
+			}
+	}
+- vitual 
+	A) number is virtual 
+	B) disable on implemation 
+	C) calll back if numfil
+
+Win Forms 
+- Delete = void (object, EvertArgs)
+- Edit = void object, ExertArgs)
+- Add = void (object, ExertArgs)
+- Same function type and very excansable 
+- or delegate in C# 
+- returns a return type or function 
+- can do it with variable 
+- delegete 
+	-  allow us  to open up code and call it 
+	- dynamic enviroment 
+public delegate void ButtonClickCall( object sender, EventArgs event Args); 
+
+private void CallButton( ButtonClickCall functionToCall) 
+{
+	funcitonToCall(this, EventArgs.Empty); 
+}
+	-  delegate only work with functions 
+
+.link
+	-  to show how many arrays can happen 
+	
+listofStudeentname 
+{
+	string[] name = new string[100]
+							string (20) = will display null 
+	ennumate 
+	
+	foreach (var name - names)
+	{
+	
+	}
+need to data bound 
+- mostly automated 
+
+system.Collection 
+	- list 
+	- collection 
+	- stack 
+	- cube
+	- Dictionary key = vlaue
+Don't use ArrayList
+System.Colleciton.ArrayList don't really use it 
+	-Default
+		- List		  //implemation(private)  
+		- Collection  // public 
+	- Need rhs
+		-Stack 
+		-Queue 
+	- My Key to value 
+		- Disctionary key =value 
+Prdouct[]
+iont[]
+string[]
+get (int)=> _items[index]
+add (product)
+{
+	FindLastElement()
+		- if no room relocate()
+	InsertNew()
+}
+Remove(product)
+{
+index = FindOitem{
+	"delete.it"
+}
+
+Generic Type 
+private List<Product> _list = new List<Product>(); 
+for creating a new product in a list of current products
+
+1) interface 
+	- construct or extract 
+	- get past the compiler, and talk to a different peace of code 
+	- eassier to change 
+2) certain members 
+	- properties 
+	- methods 
+	- events 
+3) validation interface 
+	- Ivelidated object 
+	- 
+
+	
+	
