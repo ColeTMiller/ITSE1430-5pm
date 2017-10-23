@@ -1,0 +1,56 @@
+1) Validator.TryValidateObject (value, context(newvalidate.object), results(true/false, collection validation resurts)) 
+	returns a boolean 
+	{
+	var context = new ValidationConetxt(value);
+	var results = new List<ValidationResult>(); 
+	}
+2) 	implessmenate 
+	- interface autocmagically base o
+	explessmentate 
+	- interface, member delectration 
+3) abstract class
+	- base implamation 
+	- must be inherited 
+	- can not create a instance of this type 
+	- some members abstract 
+
+list view box 
+	- one render list value item 
+		- has a text property
+	- sub items 
+		- uses string array []
+		- window explorer has three list view box 
+	- image to render 
+		- windows is response with the how much information is stored 
+data grid view box 
+	- very fine view data 
+	- win form control 
+	- operating system does nothing 
+	-  rendures slowly 
+	- heavy control 
+	- ASP.net extract same type name, and design to do the extact same thing 
+	- in windows form for more information INSTEAD ASP.NET
+	- v1
+		- had a grid view for ASP.NET
+		- Window Form has datagrid 
+
+Datagrid view row 
+	- array of values 
+	- bind data to that grid 
+each conextion 
+	- dataGridViewCell 
+DataVewGridcolumnHeader 
+	- Is a type 
+
+DataGridView
+	- has its on set of properties 
+Id
+Name
+Description 
+Price
+IsDiscontieuned 
+
+Binding Source
+	- is wrapper around a source you want to use 
+	- data type 
+	- abstraction layer 

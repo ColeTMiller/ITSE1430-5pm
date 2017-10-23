@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Nile.Windows
@@ -13,6 +14,8 @@ namespace Nile.Windows
         protected override void OnLoad( EventArgs e )
         {
             base.OnLoad(e);
+
+            _gridProducts.AutoGenerateColumns = false;
 
             UpdateList();
         }
@@ -41,15 +44,20 @@ namespace Nile.Windows
 
         private Product GetSelectedProduct ()
         {
-            return _listProducts.SelectedItem as Product;
+
+            //return _listProducts.SelectedItem as Product;
+            return null;
         }
 
         private void UpdateList ()
         {
-            _listProducts.Items.Clear();
+            //    _listProducts.Items.Add(product);
+            //_listProducts.Items.Clear();
+            //foreach (var product in _database.GetAll())
 
-            foreach (var product in _database.GetAll())
-                _listProducts.Items.Add(product);
+            
+            _gridProducts.DataSource = _database.GetAll().ToList(); 
+
         }
 
         private void OnFileExit( object sender, EventArgs e )
@@ -59,13 +67,6 @@ namespace Nile.Windows
 
         private void OnProductAdd( object sender, EventArgs e )
         {
-            ////Make sure there is room left
-            //var index = FindAvailableElement();
-            //if (index < 0)
-            //{
-            //    MessageBox.Show("No more products avabilable.");
-            //    return;
-            //};
 
             var child = new ProductDetailForm("Product Details");
             if (child.ShowDialog(this) != DialogResult.OK)
@@ -104,11 +105,6 @@ namespace Nile.Windows
 
         private void OnProductDelete( object sender, EventArgs e )
         {
-            //var index = FindFirstProduct();
-            //if (index < 0)
-            //    return;
-
-            //var product = _products[index];
             var product = GetSelectedProduct();
             if (product == null)
                 return;
@@ -128,17 +124,10 @@ namespace Nile.Windows
             var about = new AboutBox();
             about.ShowDialog(this);
 
-            //CallButton(OnProductAdd);
         }
 
-        public delegate void ButtonClickCall( object sender, EventArgs e );
 
-        private void CallButton ( ButtonClickCall functionToCall )
-        {
-            functionToCall(this, EventArgs.Empty);
-        }
-
-        private IProductDatabase _database = new Nile.Stores.MemoryProductDatabase();
+        private IProductDatabase _database = new Nile.Stores.SeedMemoryProductDatabase();
         //private Product[] _products = new Product[100];
     }
 }

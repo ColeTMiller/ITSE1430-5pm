@@ -13,11 +13,6 @@ namespace Nile
     /// </remarks>
     public class Product : IValidatableObject
     {
-        //Don't need this constructor
-        public Product ()
-        {
-            //Cross field initialization
-        }
 
         /// <summary>Gets or sets the unique identifier.</summary>
         public int Id { get; set; }
@@ -29,16 +24,10 @@ namespace Nile
         public string Name
         {
             // string get_Name ()
-            get 
-            {
-                return _name ?? "";
-            }
+            get { return _name ?? ""; }
 
             // void set_Name ( string value )
-            set 
-            {
-                _name = value?.Trim();
-            }
+            set{_name = value?.Trim(); }
         }
         
         /// <summary>Gets or sets the description.</summary>
@@ -113,12 +102,8 @@ namespace Nile
             //return errors;
         }
 
-        //public int ICanOnlySetIt { get; private set; }
-        //public int ICanOnlySetIt2 { get; }
-
         private string _name;
         private string _description;
 
-        //private readonly double _someValueICannotChange = 10;
     }
 }
