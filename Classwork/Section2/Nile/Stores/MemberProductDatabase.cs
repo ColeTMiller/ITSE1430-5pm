@@ -5,12 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Nile
+namespace Nile.Stores
+
 {
     /// <summary>Base class for product database.</summary>
-    public class ProductDatabase
+    public class MemberProductDatabase : IProductDatabase
     {
-        public ProductDatabase ()
+        public MemberProductDatabase ()
         {
             //Long way
             //var product = new Product();
@@ -34,14 +35,14 @@ namespace Nile
             //};
 
             //Collection initializer syntax with array
-            _products.AddRange(new [] {
-                new Product() { Id = 1, Name = "Galaxy S7", Price = 650 },
-                new Product() { Id = 2, Name = "Galaxy Note 7", Price = 150, IsDiscontinued = true },
-                new Product() { Id = 3, Name = "Windows Phone", Price = 100 },
-                new Product() { Id = 4, Name = "iPhone X", Price = 1900, IsDiscontinued = true },
-            });            
+            //_products.AddRange(new [] {
+            AddCore(new Product() { Id = 1, Name = "Galaxy S7", Price = 650 });
+            AddCore(new Product() { Id = 2, Name = "Galaxy Note 7", Price = 150, IsDiscontinued = true });
+            AddCore(new Product() { Id = 3, Name = "Windows Phone", Price = 100 });
+            AddCore(new Product() { Id = 4, Name = "iPhone X", Price = 1900, IsDiscontinued = true });
+           // });            
 
-            _nextId = _products.Count + 1;
+            //_nextId = _products.Count + 1;
         }
 
         /// <summary>Adds a product.</summary>
@@ -61,8 +62,7 @@ namespace Nile
 
             //Emulate database by storing copy
             var newProduct = CopyProduct(product);
-            _products.Add(newProduct);
-            newProduct.Id = _nextId++;
+            AddCore(newProduct); 
 
             return CopyProduct(newProduct);
 
@@ -163,7 +163,16 @@ namespace Nile
 
             return CopyProduct(newProduct);
         }
+        protected void AddCore(Product product)
+        {
+            _products.Add(product);
 
+            if(product.Id <= 0)
+                product.Id = _nextId++;
+            else if(product.Id >=_nextId)
+                _nextId = product.Id + 1; 
+
+        }
         private Product CopyProduct ( Product product )
         {
             if (product == null)

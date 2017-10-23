@@ -88,6 +88,10 @@ namespace Nile
         private int[] _sizes = new int[4];
 
         //public abstract string Validate2();
+       //IEnumerable<ValidationResult> IValidatableObject.Validate( ValidationContext validationContext )
+       // {
+
+       // }
 
         /// <summary>Validates the object.</summary>
         /// <returns>The error message or null.</returns>      

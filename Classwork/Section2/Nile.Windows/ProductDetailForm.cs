@@ -82,6 +82,7 @@ namespace Nile.Windows
                 IsDiscontinued = _chkDiscontinued.Checked,
             };
 
+
             //Add validation
             //var error = product.Validate();
             //if (!String.IsNullOrEmpty(error))

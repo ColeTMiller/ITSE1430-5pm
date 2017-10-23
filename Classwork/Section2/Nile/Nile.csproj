@@ -41,9 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IProductDatabase.cs" />
     <Compile Include="ObjectValidator.cs" />
     <Compile Include="Product.cs" />
-    <Compile Include="ProductDatabase.cs" />
+    <Compile Include="Stores\SeedMemoryProductDatabase - Copy.cs" />
+    <Compile Include="Stores\MemberProductDatabase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
