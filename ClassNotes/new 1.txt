@@ -1,0 +1,29 @@
+Book Class
+
+	- ISBN 
+	title, 
+	first name 
+	- last name 
+	- Check book (bool)
+	
+getter 
+	- ISBN
+	- title 
+	- fName 
+	- lName 
+
+setter 
+	- bool bookStatues
+
+library Class 
+	- loadBooks(string fileName) // insert sort function to store in the seperate in classes of book 
+	- addBook(Book book) 
+	- checkBookOut(string ISBN)
+	- checkBookIn(string ISBN)
+	- printBookList()
+	
+	Constructor 
+	- Library{}
+	- Library(string fileName) 
+		- call loadBooks(fileName)
+		

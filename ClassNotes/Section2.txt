@@ -206,7 +206,57 @@ for creating a new product in a list of current products
 	- events 
 3) validation interface 
 	- Ivelidated object 
-	- 
+nameof operator 
+	- identifier 
+	- takes any identifer, and changes to any  string identifier 
+	- compiler is going do that anyways 
+	- enemilates a string identifier floating around 
+	
+yield operation 
+	- illiator 
+	- IEnumberable T
+		- collation of items of a list 
+	- only can be used in iEnumberable_T_ 
+	- defer exicution 
+	- yield actural resistes what you can do 
 
+Directory 
+	- getfiles (path, file) -> string[] 
+	- windows 
+		- assembly
+		- temp
+		- system32
+		- system 64
+		- divery
+	- return back a string array 
+	- to build it 
+		- look at every file, and everything inside it 
+	- use a list, and expand that 
+	-	- really slow 
+		- slow
+	- uses enumator IEnumeramator< string // takes time of looking at each file 
+		- var file =  Directory IEnumerable
+			- if(string.IsNullorEmpty(Name))
+				yield return new ValidationResult("Name cannot be empy.", new[] (namof(Name) });
+			- if(Price < 0)
+				- yield return new ValidationResult("Price must be >=0.", new[](naeof(PRice)}); 
+	- list/ collection
+			-  lists are fields 
+			- are readable and writeable
+			-  are second for adding new list 
+			- array's and replaceable 
+			- is third and not really used for adding stuff unless its not really long and has the same return type 
+	IEnumberable is - repeaterable 
+		- the number one chose is number 1 
+		- cannot add files 
+	
+More interfaces
+	- iVadilable object 
+		-  whats members can you call 
+			- obj validate (); 
+		- Product p.validate 
+			- 
+		-  it dynamic validate code for you 
+	- 
 	
 	
