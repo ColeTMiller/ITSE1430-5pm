@@ -54,3 +54,30 @@ Binding Source
 	- is wrapper around a source you want to use 
 	- data type 
 	- abstraction layer 
+
+1) Binding to a class name 
+	- Data Propertie name 
+
+2) Formating a name or price in a sorted way
+	- CellStyle Format 
+	- ToString will deafult to memory 
+		- but you can deafult what it returns a certain way or format in a certain way
+3) Bind the data to scource 
+	- Data Source 
+	
+4) delegate 
+	- pass methods to arguments 
+	- function object 
+		- treat  a arguement like a function to pass it around 
+Action <T>, func <R>
+	- generic type 
+	- delegate types 
+	- Eventhandler (object, eventArgs e)
+		 - return type is a void 
+	- Action <T> 
+		- has a paramter and returns <T>
+	- Func <R> 
+		-  has no parameter and just returns <R>
+
+binding source allows you go forward and back 
+
