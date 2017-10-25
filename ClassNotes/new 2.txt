@@ -25,4 +25,7 @@ class Player
 		void getHitpoints() const;
 		void playeragility() const; 
 		
+		
 }
+
+do not use namespace std;  in class for construction and class private and public
