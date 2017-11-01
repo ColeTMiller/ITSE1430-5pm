@@ -41,6 +41,20 @@ namespace MovieDatabase
         {
             Close();
         }
-        
+
+        private void OnMovieAdd(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OnMovieEdit(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OnMovieDelete(object sender, EventArgs e)
+        {
+
+        }
     }
 }
