@@ -1,0 +1,13 @@
+C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\Section4\Nile.Windows\bin\Debug\Nile.Windows.exe.config
+C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\Section4\Nile.Windows\bin\Debug\Nile.Windows.exe
+C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\Section4\Nile.Windows\bin\Debug\Nile.Windows.pdb
+C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\Section4\Nile.Windows\bin\Debug\Nile.dll
+C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\Section4\Nile.Windows\bin\Debug\Nile.pdb
+C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\Section4\Nile.Windows\obj\Debug\Nile.Windows.csprojResolveAssemblyReference.cache
+C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\Section4\Nile.Windows\obj\Debug\Nile.Windows.AboutBox.resources
+C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\Section4\Nile.Windows\obj\Debug\Nile.Windows.MainForm.resources
+C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\Section4\Nile.Windows\obj\Debug\Nile.Windows.ProductDetailForm.resources
+C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\Section4\Nile.Windows\obj\Debug\Nile.Windows.Properties.Resources.resources
+C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\Section4\Nile.Windows\obj\Debug\Nile.Windows.csproj.GenerateResource.Cache
+C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\Section4\Nile.Windows\obj\Debug\Nile.Windows.exe
+C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\Section4\Nile.Windows\obj\Debug\Nile.Windows.pdb

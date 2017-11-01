@@ -1,0 +1,5 @@
+C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\Section4\Nile\bin\Debug\Nile.dll
+C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\Section4\Nile\bin\Debug\Nile.pdb
+C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\Section4\Nile\obj\Debug\Nile.csprojResolveAssemblyReference.cache
+C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\Section4\Nile\obj\Debug\Nile.dll
+C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\Section4\Nile\obj\Debug\Nile.pdb
