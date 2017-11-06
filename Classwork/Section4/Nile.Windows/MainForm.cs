@@ -1,6 +1,8 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Windows.Forms;
+using Nile.Stores;
 
 namespace Nile.Windows
 {
@@ -18,6 +20,9 @@ namespace Nile.Windows
         {
             base.OnLoad(e);
 
+            _database = new Nile.Stores.FileProductDatabase("products.csv");
+            ProductDatabaseExtensions.WithSeedData(_database);
+
             _gridProducts.AutoGenerateColumns = false;
 
             UpdateList();
@@ -33,12 +38,23 @@ namespace Nile.Windows
 
         private void OnProductAdd( object sender, EventArgs e )
         {
+            //_database.Add(null);
+
             var child = new ProductDetailForm("Product Details");
             if (child.ShowDialog(this) != DialogResult.OK)
                 return;
 
             //Save product
-            _database.Add(child.Product);
+            try
+            {
+                _database.Add(child.Product);
+            } catch (ValidationException ex)
+            {
+                DisplayError(ex, "Validation Failed");
+            } catch (Exception ex)
+            {
+                DisplayError(ex, "Add Failed");
+            };
             UpdateList();
         }
 
@@ -48,7 +64,7 @@ namespace Nile.Windows
             if (product == null)
                 return;
 
-            DeleteProduct(product);
+            DeleteProduct(product);            
         }
 
         private void OnProductEdit( object sender, EventArgs e )
@@ -95,7 +111,7 @@ namespace Nile.Windows
                 DeleteProduct(product);
 
             //Don't continue with key
-            e.SuppressKeyPress = true; 
+            e.SuppressKeyPress = true;
         }
         #endregion
 
@@ -109,8 +125,24 @@ namespace Nile.Windows
                 return;
 
             //Delete product
-            _database.Remove(product.Id);
+            try
+            {
+                _database.Remove(product.Id);
+            } catch (Exception e)
+            {
+                DisplayError(e, "Delete Failed");
+            };
             UpdateList();
+        }
+
+        private void DisplayError ( Exception error, string title = "Error" )
+        {
+            DisplayError(error.Message, title);
+        }
+
+        private void DisplayError ( string message, string title = "Error" )
+        {
+            MessageBox.Show(this, message, title ?? "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void EditProduct( Product product )
@@ -121,7 +153,14 @@ namespace Nile.Windows
                 return;
 
             //Save product
-            _database.Update(child.Product);
+            try
+            {
+                _database.Update(child.Product);
+            } catch (Exception ex)
+            {
+                DisplayError(ex, "Update Failed");                    
+            };
+
             UpdateList();
         }
 
@@ -135,10 +174,17 @@ namespace Nile.Windows
 
         private void UpdateList()
         {
-            _bsProducts.DataSource = _database.GetAll().ToList();
+            try
+            {
+                _bsProducts.DataSource = _database.GetAll().ToList();
+            } catch (Exception e)
+            {
+                DisplayError(e, "Refresh Failed");
+                _bsProducts.DataSource = null;
+            };
         }
 
-        private IProductDatabase _database = new Nile.Stores.SeedMemoryProductDatabase();
+        private IProductDatabase _database;
         #endregion
     }
 }
