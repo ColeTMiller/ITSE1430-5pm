@@ -21,8 +21,10 @@ namespace Nile.Windows
             base.OnLoad(e);
 
             _database = new Nile.Stores.FileProductDatabase("products.csv");
-            ProductDatabaseExtensions.WithSeedData(_database);
-
+            _database.WithSeedData();
+            
+           // ProductDatabaseExtensions.WithSeedData(_database);
+            
             _gridProducts.AutoGenerateColumns = false;
 
             UpdateList();
