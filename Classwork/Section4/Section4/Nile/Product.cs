@@ -20,21 +20,17 @@ namespace Nile
         /// <value>Never returns null.</value>
         public string Name
         {
-            get => _name ?? ""; 
-            set => _name = value?.Trim();
+            get { return _name ?? ""; }
+            set { _name = value?.Trim(); }
         }
         
         /// <summary>Gets or sets the description.</summary>
         public string Description
         {
-            get => _description ?? ""; 
-            set => _description = value?.Trim(); 
+            get { return _description ?? ""; }
+            set { _description = value?.Trim(); }
         }
 
-        public decimal CalculatedProperty => 0M;
-
-        public decimal CalculatedProperty2 = 0M; 
-      
         /// <summary>Gets or sets the price.</summary>
         public decimal Price { get; set; } = 0;      
 

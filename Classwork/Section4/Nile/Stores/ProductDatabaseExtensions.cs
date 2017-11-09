@@ -2,6 +2,8 @@
  * ITSE 1430
  */
 using System;
+using System.Collections.Generic;
+using System.Linq; 
 
 namespace Nile.Stores
 {
@@ -17,6 +19,24 @@ namespace Nile.Stores
             }
             return null; 
         }
+        
+        public static IEnumerable<Product> GetPRoductsByDiscountPrice( this IProductDatabase source,
+                                                                        Func<Product, decimal> priceCalculator)
+        {
+            var products = from product in source.GetAll()
+                           where product.IsDiscontinued
+                           //orderby priceCalculator(product)
+                           select new  { Product = product, AdjustedPRice = product.IsDiscontinued ? priceCalculator(product) : product.Price };
+
+            
+            return from product in products
+                   orderby product.AdjustedPrice
+                   select product.Product; 
+        }
+        //private (Product, AdjustedPRice : decimal) DoSomething()
+        //{
+        //    return (new Prduct, 10M); 
+        //}
         /// <summary>Adds seed data to a database.</summary>
         /// <param name="database">The data to seed.</param>
         public static void WithSeedData( this IProductDatabase source )
