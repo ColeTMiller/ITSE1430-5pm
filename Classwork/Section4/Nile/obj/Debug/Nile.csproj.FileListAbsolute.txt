@@ -8,3 +8,9 @@ C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\Section4\Nile\bin\De
 C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\Section4\Nile\obj\Debug\Nile.csprojResolveAssemblyReference.cache
 C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\Section4\Nile\obj\Debug\Nile.dll
 C:\Users\cole.miller218\Source\Repos\ITSE1430-5pm\Classwork\Section4\Nile\obj\Debug\Nile.pdb
+C:\Users\Cole\source\repos\ITSE1430-5pm\Classwork\Section4\Nile\bin\Debug\Nile.dll
+C:\Users\Cole\source\repos\ITSE1430-5pm\Classwork\Section4\Nile\bin\Debug\Nile.pdb
+C:\Users\Cole\source\repos\ITSE1430-5pm\Classwork\Section4\Nile\obj\Debug\Nile.csprojResolveAssemblyReference.cache
+C:\Users\Cole\source\repos\ITSE1430-5pm\Classwork\Section4\Nile\obj\Debug\Nile.csproj.CoreCompileInputs.cache
+C:\Users\Cole\source\repos\ITSE1430-5pm\Classwork\Section4\Nile\obj\Debug\Nile.dll
+C:\Users\Cole\source\repos\ITSE1430-5pm\Classwork\Section4\Nile\obj\Debug\Nile.pdb
