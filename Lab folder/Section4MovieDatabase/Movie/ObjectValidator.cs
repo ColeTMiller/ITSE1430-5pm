@@ -31,14 +31,5 @@ namespace Movie
         {
             ObjectValidator.ValidateObject(value, newValidationContext(value)); 
         }
-
-        internal static void Validate(Movie movie)
-        {
-            throw new NotImplementedException();
-        }
-
-        public interface IValidatableObject
-        {
-        }
     }
 }
