@@ -1,0 +1,31 @@
+Cole Miller
+Quiz 3
+10/17/18
+7:40
+
+class Player 
+{
+	private:
+		std::string name;
+		int hit points; 
+		double agility; 
+		
+	public:
+		//Consturctor 
+		Player();
+		Player(std::string name, int hit points, double agility);
+		
+		// getter 
+		std::string GetName(std::string name);
+		int getHitpoints (int hit points);
+		double playeragility(double agility); 
+		
+		// setter 
+		void GetName() const;
+		void getHitpoints() const;
+		void playeragility() const; 
+		
+		
+}
+
+do not use namespace std;  in class for construction and class private and public
