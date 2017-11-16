@@ -20,31 +20,41 @@ namespace Nile
         /// <value>Never returns null.</value>
         public string Name
         {
-            get => _name ?? ""; 
+            get => _name ?? "";
             set => _name = value?.Trim();
         }
         
         /// <summary>Gets or sets the description.</summary>
         public string Description
         {
-            get => _description ?? ""; 
-            set => _description = value?.Trim(); 
+            get => _description ?? "";
+            set => _description = value?.Trim();
         }
 
-        public decimal CalculatedProperty => 0M;
+        //Calculated property
+        //public decimal CalculatedProperty
+        //{
+        //    get => 0M;
+        //}
 
-        public decimal CalculatedProperty2 = 0M; 
-      
+        //Getter only property with expression body
+        //public decimal CalculatedProperty => 0M;
+
+        //Field, oops, with expression body
+        //public decimal CalculatedProperty2 = 0M;
+
         /// <summary>Gets or sets the price.</summary>
         public decimal Price { get; set; } = 0;      
 
         /// <summary>Determines if discontinued.</summary>
         public bool IsDiscontinued { get; set; }
 
-        public override string ToString()
-        {
-            return Name;
-        }
+        //public override string ToString()
+        //{
+        //    return Name;
+        //}
+
+        public override string ToString() => Name;
 
         /// <summary>Validates the object.</summary>
         /// <returns>The error message or null.</returns>      

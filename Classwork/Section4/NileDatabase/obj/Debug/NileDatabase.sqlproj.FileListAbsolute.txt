@@ -1,0 +1,9 @@
+C:\Users\cole.miller218\Source\Repos\ITSE1430\ClassWork\Section4\NileDatabase\bin\Debug\NileDatabase.dacpac
+C:\Users\cole.miller218\Source\Repos\ITSE1430\ClassWork\Section4\NileDatabase\bin\Debug\NileDatabase.dll
+C:\Users\cole.miller218\Source\Repos\ITSE1430\ClassWork\Section4\NileDatabase\bin\Debug\NileDatabase.pdb
+C:\Users\cole.miller218\Source\Repos\ITSE1430\ClassWork\Section4\NileDatabase\obj\Debug\Model.xml
+C:\Users\cole.miller218\Source\Repos\ITSE1430\ClassWork\Section4\NileDatabase\obj\Debug\refactor.xml
+C:\Users\cole.miller218\Source\Repos\ITSE1430\ClassWork\Section4\NileDatabase\obj\Debug\postdeploy.sql
+C:\Users\cole.miller218\Source\Repos\ITSE1430\ClassWork\Section4\NileDatabase\obj\Debug\predeploy.sql
+C:\Users\cole.miller218\Source\Repos\ITSE1430\ClassWork\Section4\NileDatabase\obj\Debug\NileDatabase.dll
+C:\Users\cole.miller218\Source\Repos\ITSE1430\ClassWork\Section4\NileDatabase\obj\Debug\NileDatabase.pdb
