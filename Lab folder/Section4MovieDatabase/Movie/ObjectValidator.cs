@@ -29,7 +29,7 @@ namespace Movie
         /// <exception cref="ValidationException"> <paramref name="value"/> is invalid</exception>
         public static void Validate(IValidatableObject value)
         {
-            ObjectValidator.ValidateObject(value, newValidationContext(value)); 
+            Validator.ValidateObject(value, newValidationContext(value)); 
         }
     }
 }
