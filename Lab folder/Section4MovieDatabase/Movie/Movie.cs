@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Movie
 {
-    public class Movie : IValidatableObject
+    public class Movie : IValidationObject
     {
         public int Id { get; set; }
 

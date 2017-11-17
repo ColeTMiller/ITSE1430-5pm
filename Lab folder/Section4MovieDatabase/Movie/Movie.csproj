@@ -47,6 +47,8 @@
     <Compile Include="MovieDatabaseExtensions.cs" />
     <Compile Include="ObjectValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="types\FileMovieDatabase.cs" />
+    <Compile Include="types\MemoryMovieDatabase.cs" />
     <Compile Include="types\MovieDatabase.cs" />
   </ItemGroup>
   <ItemGroup>

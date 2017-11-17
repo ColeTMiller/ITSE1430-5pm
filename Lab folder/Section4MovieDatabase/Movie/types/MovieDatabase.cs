@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Movie.types
 {
-    public abstract class MovieDatabase
+    public abstract class MovieDatabase : IMovieDatabase
     {
         public Movie Add( Movie movie)
         {
