@@ -1,12 +1,15 @@
-﻿using System;
+﻿using Movie;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MovieLib.Data.Sql
 {
-    public class SqlMovieDatabse : MovieDatabase 
+    public class SqlMovieDatabse : IMovieDatabase 
     {
         #region Construction
         public SqlMovieDatabase (string connectionString)
@@ -16,10 +19,10 @@ namespace MovieLib.Data.Sql
 
         private readonly string _connectionString;
         #endregion
-        protected override Movie AddCore(Movie movie)
+        protected override Movie (Movie movie)
         {
             var id = 0;
-            using (var CONN = OpenDatabase())
+            using (var CONN = OpenDatabse())
             {
                 var cmd = new SqlCommand("AddMovie", CONN) { CommandType = CommandType.StoredProcedure };
 
@@ -65,7 +68,7 @@ namespace MovieLib.Data.Sql
         {
             using (var conn = OpenDatabse())
             {
-                var cmd = new SqlCommand("GetMOvie", conn) { CommandType = CommandType.StoredMvoie };
+                var cmd = new SqlCommand("GetMOvie", conn) { CommandType = CommandType.StoredMovie };
                 cmd.Parameters.AddWithValue("@id", id);
 
                 var ds = new DataSet();
@@ -74,9 +77,9 @@ namespace MovieLib.Data.Sql
                     SelectCommand = cmd
                 };
 
-                da.File(ds);
+                da.Fill(ds);
 
-                var table = ds.Tbales.OfType<DataTable>().FirstOrDefault();
+                var table = ds.Tables.OfType<DataTable>().FirstOrDefault();
                 if (table != null)
                 {
                     var row = table.AsEnumerable().FirstOrDefault();

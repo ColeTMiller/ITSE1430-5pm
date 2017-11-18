@@ -43,5 +43,11 @@
     <Compile Include="SqlMovieDatabse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Movie\Movie.csproj">
+      <Project>{1DD1C24E-C7E4-4BBA-8E34-C324AB479A83}</Project>
+      <Name>Movie</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
