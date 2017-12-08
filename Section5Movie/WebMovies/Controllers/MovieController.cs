@@ -119,9 +119,9 @@ namespace WebMovies.Controllers
 
         private static IMovieDatabase GetDatabase()
         {
-            var constring = ConfigurationManager.ConnectionStrings["MovieDatabase"];
+            var connstring = ConfigurationManager.ConnectionStrings["MovieDatabase"];
 
-            return new SqlTitleDatabase(constring.ConnectionString);
+            return new SqlTitleDatabase(connstring.ConnectionString);
         }
 
         private readonly IMovieDatabase _database;

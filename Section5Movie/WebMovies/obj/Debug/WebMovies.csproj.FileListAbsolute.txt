@@ -1,4 +1,3 @@
-C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\WebMovies\bin\ApplicationInsights.config
 C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\WebMovies\bin\roslyn\csc.exe
 C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\WebMovies\bin\roslyn\csc.exe.config
 C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\WebMovies\bin\roslyn\csc.rsp

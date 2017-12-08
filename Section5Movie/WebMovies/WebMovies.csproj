@@ -160,9 +160,6 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -188,10 +185,13 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Movie\Add.cshtml" />
+    <Content Include="Views\Movie\Delete.cshtml" />
+    <Content Include="Views\Movie\Edit.cshtml" />
+    <Content Include="Views\Movie\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Movie\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -210,10 +210,6 @@
     <ProjectReference Include="..\Movie.Triogole.Sql\Movie.Triogole.Sql.csproj">
       <Project>{092cb182-0f52-4ed3-8554-4d9a2b2b00d4}</Project>
       <Name>Movie.Triogole.Sql</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MovieDatabase\MovieDatabase.sqlproj">
-      <Project>{d336cd26-c9b8-4b7f-83e7-2f951df1fabc}</Project>
-      <Name>MovieDatabase</Name>
     </ProjectReference>
     <ProjectReference Include="..\Movie\Movie.csproj">
       <Project>{65B8B060-7A69-4E3C-AD20-1339CE5852E4}</Project>
