@@ -29,7 +29,7 @@ namespace Movie
 
 
         public override string ToString() => Title;
-        public override string ToString() => Episode;
+    
 
         public IEnumerable<ValidationResult> Validate (ValidationContext validationContext)
         {

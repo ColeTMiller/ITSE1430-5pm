@@ -33,6 +33,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -91,6 +93,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Movie\Films\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Movie\Movie.csproj">
+      <Project>{1dd1c24e-c7e4-4bba-8e34-c324ab479a83}</Project>
+      <Name>Movie</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

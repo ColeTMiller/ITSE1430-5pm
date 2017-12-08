@@ -1,4 +1,5 @@
 ﻿
+using Movie;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,24 +45,7 @@ namespace Section4MovieDatabase
             if (movie == null)
                 return;
 
-            DeleteMovie(movie);
-        }
-
-        private void DeleteMovie(Movie movie)
-        {
-            if (MessageBox.Show(this, $"Are you sure you wnat to delete'{movie.title}'?",
-                            "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-                return;
-
-            // Delete Movie 
-            try
-            {
-                _database.Remove(movie.id);
-            } catch (Exception e)
-            {
-                DisplayError(e, "Delete Failed");
-            }
-            UpdateList();
+           DeleteMovie(movie);
         }
 
         private void OnMovieAdd(object sender, EventArgs e)
@@ -73,7 +57,7 @@ namespace Section4MovieDatabase
             try
             {
                 _database.Add(child.Movie);
-            } catch (ValidationException ex)
+            } catch (System.ComponentModel.DataAnnotations.ValidationException ex)
             {
                 DisplayError(ex, "Validation Failed");
             } catch (Exception ex)
@@ -95,7 +79,34 @@ namespace Section4MovieDatabase
             EditMovie(movie);
         }
 
-        private void DeleteMovie(Movie movie)
+        private void OnEditRow(object sender, DataGridViewCellEventArgs e)
+        {
+            var grid = sender as DataGridView;
+
+            if (e.RowIndex < 0)
+                return;
+
+            var row = grid.Rows[e.RowIndex];
+            var item = row.DataBoundItem as Movie;
+
+            if(item != null)
+                EditMovie(item); 
+        }
+
+        private void OnKeyDownGrid(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Delete)
+                return;
+
+            var movie = GetSelectedMovie();
+            if (movie != null)
+                DeleteMovie(movie);
+
+            e.SuppressKeyPress = true; 
+        }
+        #region shh Private
+
+        private void DeleteMovie( Movie movie)
         {
             if (MessageBox.Show(this, $"Are you sure you want to delete'{Movie.Title}'?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 return;
@@ -120,7 +131,7 @@ namespace Section4MovieDatabase
             MessageBox.Show(this, message, title ?? "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void EditMovie(Movie movie)
+        private void EditMovie( Movie movie)
         {
             var child = new MovieDetailForm("Movie Detail");
             child.Movie = movie;
@@ -129,7 +140,7 @@ namespace Section4MovieDatabase
 
             try
             {
-                _databse.Update(child.ProductName);
+                _database.Update(child.ProductName);
             } catch (Exception ex)
             {
                 DisplayError(ex, "Update Failed");
@@ -158,6 +169,7 @@ namespace Section4MovieDatabase
             };
         }
 
-        private IMovieDatabase _database; 
-     }
+        private IMovieDatabase _database;
+        #endregion
+    }
 }

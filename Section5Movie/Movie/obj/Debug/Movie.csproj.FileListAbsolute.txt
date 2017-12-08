@@ -1,0 +1,6 @@
+C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\Movie\bin\Debug\Movie.dll
+C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\Movie\bin\Debug\Movie.pdb
+C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\Movie\obj\Debug\Movie.csprojResolveAssemblyReference.cache
+C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\Movie\obj\Debug\Movie.csproj.CoreCompileInputs.cache
+C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\Movie\obj\Debug\Movie.dll
+C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\Movie\obj\Debug\Movie.pdb

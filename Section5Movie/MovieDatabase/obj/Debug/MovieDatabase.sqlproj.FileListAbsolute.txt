@@ -1,0 +1,2 @@
+C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\MovieDatabase\obj\Debug\MovieDatabase.dll
+C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\MovieDatabase\obj\Debug\MovieDatabase.pdb

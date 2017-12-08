@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nile;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,8 +60,8 @@ namespace Section4MovieDatabase
                 Title = _txtTitle.Text,
                 Episode = _txtEpisode.Text,
                 Time = GetTime(_txtTime),
-                Own? = _chkOwn.Checked,
-            }; 
+                Own = _chkOwn.Checked 
+                }; 
 
             // Validte 
             if(!ObjectValidator. TryValidate(movie, out var errors))

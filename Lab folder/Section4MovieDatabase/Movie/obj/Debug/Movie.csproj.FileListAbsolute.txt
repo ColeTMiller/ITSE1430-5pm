@@ -1,0 +1,2 @@
+C:\Users\Cole\source\repos\ITSE1430-5pm\Lab folder\Section4MovieDatabase\Movie\obj\Debug\Movie.csprojResolveAssemblyReference.cache
+C:\Users\Cole\source\repos\ITSE1430-5pm\Lab folder\Section4MovieDatabase\Movie\obj\Debug\Movie.csproj.CoreCompileInputs.cache

@@ -1,0 +1,8 @@
+C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\Movie.Triogole.Sql\bin\Debug\Movie.Triogole.Sql.dll
+C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\Movie.Triogole.Sql\bin\Debug\Movie.Triogole.Sql.pdb
+C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\Movie.Triogole.Sql\bin\Debug\Movie.dll
+C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\Movie.Triogole.Sql\bin\Debug\Movie.pdb
+C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\Movie.Triogole.Sql\obj\Debug\Movie.Triogole.Sql.csprojResolveAssemblyReference.cache
+C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\Movie.Triogole.Sql\obj\Debug\Movie.Triogole.Sql.csproj.CoreCompileInputs.cache
+C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\Movie.Triogole.Sql\obj\Debug\Movie.Triogole.Sql.dll
+C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\Movie.Triogole.Sql\obj\Debug\Movie.Triogole.Sql.pdb

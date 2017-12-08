@@ -9,7 +9,7 @@ namespace Movie.Films
     /// <summary>
     /// Provides an implementation of <see cref="IMovieDatabase"/> using a memory collection 
     /// </summary>
-    public class MemoryMovieDatabase : MovieDatabase
+    public class MemoryMovieDatabase : MoveDatabase
     {
         protected override Movie AddCore(Movie movie)
         {
@@ -67,6 +67,18 @@ namespace Movie.Films
                     where movie.Id == id
                     select movie).FirstOrDefault(); 
         }
+
+        protected override Movie UpdateCore(Movie existing, Movie newitem)
+        {
+            existing = FindMovie(movie.Id);
+                _movies.Remove(existing);
+
+            var newMovie = CopyMovie(movie);
+            _movies.Add(newMovie);
+
+            return CopyMovie(newMovie); 
+        }
+
         private List<Movie> _movies = new List<Movie>();
         private int _nextId = 1; 
     }
