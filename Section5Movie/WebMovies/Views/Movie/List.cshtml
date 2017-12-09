@@ -1,14 +1,14 @@
 ﻿@model IEnumerable<WebMovies.Models.MovieViewModels>
 
 @{
-    ViewBag.Title = "List";
+    ViewBag.Title = "Movie";
     Layout = "~/Views/_ViewStart.cshtml";
 }
 
-<h2>List</h2>
+<h2>Movies</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Add")
 </p>
 <table class="table">
     <tr>
@@ -43,7 +43,6 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.Id })
         </td>
     </tr>
