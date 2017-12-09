@@ -1,0 +1,6 @@
+C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\MovieDatabase\MovieDatabase\bin\Debug\MovieDatabase.dacpac
+C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\MovieDatabase\MovieDatabase\bin\Debug\MovieDatabase.dll
+C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\MovieDatabase\MovieDatabase\bin\Debug\MovieDatabase.pdb
+C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\MovieDatabase\MovieDatabase\obj\Debug\MovieDatabase.sqlprojResolveAssemblyReference.cache
+C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\MovieDatabase\MovieDatabase\obj\Debug\MovieDatabase.dll
+C:\Users\Cole\source\repos\ITSE1430-5pm\Section5Movie\MovieDatabase\MovieDatabase\obj\Debug\MovieDatabase.pdb

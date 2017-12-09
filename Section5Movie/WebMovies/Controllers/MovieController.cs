@@ -1,24 +1,26 @@
-﻿using System;
+﻿//Cole Miller
+//Moviecontroller
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Movie.Triogole.Sql;
-using Movie;
 using System.Configuration;
-using WebMovies.Models; 
+using WebMovies.Models;
+using Movie;
 
 namespace WebMovies.Controllers
 {
-    [DescriptionAttribute("Handles Mvoie requests")]
+    [DescriptionAttribute("Handles Movie requests")]
     public class MovieController : Controller
     {
         public MovieController() : this(GetDatabase())
         {
         }
 
-        public MovieController(IMovieDatabase database)
+        public MovieController(Movie.IMovieDatabase database)
         {
             _database = database;
         }
@@ -119,11 +121,10 @@ namespace WebMovies.Controllers
 
         private static IMovieDatabase GetDatabase()
         {
-            var connstring = ConfigurationManager.ConnectionStrings["MovieDatabase"];
+            var connstring = ConfigurationManager.ConnectionStrings[ "MovieDatabase"]; 
 
             return new SqlTitleDatabase(connstring.ConnectionString);
         }
-
         private readonly IMovieDatabase _database;
     }
 }

@@ -1,4 +1,6 @@
-﻿using Movie.Triogoles;
+﻿//Cole Miller
+//SqlTitleDatabase.cs
+using Movie.Triogoles;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,7 +16,7 @@ namespace Movie.Triogole.Sql
         #region Construction 
         public SqlTitleDatabase(string connectionString)
         {
-            _connectionString = connectionString;
+            _connectionString = connectionString; 
         }
 
         private readonly string _connectionString;

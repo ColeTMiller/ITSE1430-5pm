@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Cole Miller
+//MovieDatabase
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,6 +27,11 @@ namespace Movie.Triogoles
                 throw; 
             };
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        ///<exception cref="ArgumentOutOfRangeException"><paramref name="id"/></exception>
+        /// <returns></returns>
          public Titles Get(int id)
         {
             if (id <= 0)

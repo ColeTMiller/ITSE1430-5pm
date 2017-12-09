@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Cole Miller
+//MemoryMovieDatabase
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -76,11 +78,6 @@ namespace Movie.Triogoles
                     where title.Id == id
                     select title).FirstOrDefault(); 
         }
-
-
-
-
-
 
         private List<Titles> _titles = new List<Titles>();
         private int _nextId = 1; 

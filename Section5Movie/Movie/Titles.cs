@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Cole Miller
+//Titles 
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
