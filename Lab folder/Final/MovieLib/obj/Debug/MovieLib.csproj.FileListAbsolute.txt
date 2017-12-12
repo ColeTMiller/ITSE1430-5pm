@@ -1,0 +1,6 @@
+C:\Users\Cole\source\repos\ITSE1430-5pm\Lab folder\Final\Final\MovieLib\obj\Debug\MovieLib.csprojResolveAssemblyReference.cache
+C:\Users\Cole\source\repos\ITSE1430-5pm\Lab folder\Final\Final\MovieLib\obj\Debug\MovieLib.csproj.CoreCompileInputs.cache
+C:\Users\Cole\source\repos\ITSE1430-5pm\Lab folder\Final\Final\MovieLib\bin\Debug\MovieLib.dll
+C:\Users\Cole\source\repos\ITSE1430-5pm\Lab folder\Final\Final\MovieLib\bin\Debug\MovieLib.pdb
+C:\Users\Cole\source\repos\ITSE1430-5pm\Lab folder\Final\Final\MovieLib\obj\Debug\MovieLib.dll
+C:\Users\Cole\source\repos\ITSE1430-5pm\Lab folder\Final\Final\MovieLib\obj\Debug\MovieLib.pdb
