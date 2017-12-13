@@ -4,6 +4,7 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
@@ -11,23 +12,24 @@ using System.Linq;
 namespace MovieLib.Data.Sql
 {
     /// <summary>Provides an implementation of <see cref="IMovieDatabase"/> using SQL Server.</summary>
-    public  class SqlMovieDatabase : MovieDatabase
+    public class SqlMovieDatabase : MovieDatabase
     {
         #region Construction
 
-        public SqlMovieDatabase ( string connectionStringOrName )
+        public SqlMovieDatabase(string connectionStringOrName)
         {
             //Is this a connection string or name ?
 
             var connString = ConfigurationManager.ConnectionStrings[connectionStringOrName];
             _connectionString = connString?.ConnectionString ?? connectionStringOrName;
         }
+
         #endregion
 
         /// <summary>Adds a movie.</summary>
         /// <param name="movie">The movie to add.</param>
         /// <returns>The added movie.</returns>
-        protected override Movie AddCore ( Movie movie )
+        protected override Movie AddCore(Movie movie)
         {
             using (var conn = new SqlConnection(_connectionString))
             {
@@ -50,7 +52,7 @@ namespace MovieLib.Data.Sql
         /// <summary>Finds a movie by its title.</summary>
         /// <param name="title">The title to find.</param>
         /// <returns>The movie, if any.</returns>
-        protected override Movie FindByTitleCore ( string title )
+        protected override Movie FindByTitleCore(string title)
         {
             //Not supported directly
             var movies = GetAllCore();
@@ -61,7 +63,7 @@ namespace MovieLib.Data.Sql
         /// <summary>Gets a specific movie.</summary>
         /// <param name="id">The ID of the movie.</param>
         /// <returns>The movie, if found.</returns>
-        protected override Movie GetCore ( int id )
+        protected override Movie GetCore(int id)
         {
             using (var conn = new SqlConnection(_connectionString))
             {
@@ -75,22 +77,22 @@ namespace MovieLib.Data.Sql
 
         /// <summary>Gets all the movies.</summary>
         /// <returns>The list of movies.</returns>
-        protected override IEnumerable<Movie> GetAllCore ()
+        protected override IEnumerable<Movie> GetAllCore()
         {
             using (var conn = new SqlConnection(_connectionString))
             {
                 var cmd = conn.CreateStoredProcedureCommand("GetAllMovies");
 
                 conn.Open();
- 
-             return  cmd.ExecuteReaderWithResults(ReadMovie);
+
+                return cmd.ExecuteReaderWithResults(ReadMovie);
             };
 
         }
 
         /// <summary>Removes a movie.</summary>
         /// <param name="id">The ID of the movie.</param>
-        protected override void RemoveCore ( int id )
+        protected override void RemoveCore(int id)
         {
             using (var conn = new SqlConnection(_connectionString))
             {
@@ -105,7 +107,7 @@ namespace MovieLib.Data.Sql
         /// <summary>Updates a movie.</summary>
         /// <param name="movie">The movie to add.</param>
         /// <returns>The updated movie.</returns>
-        protected override Movie UpdateCore ( Movie movie )
+        protected override Movie UpdateCore(Movie movie)
         {
             using (var conn = new SqlConnection(_connectionString))
             {
@@ -119,7 +121,7 @@ namespace MovieLib.Data.Sql
                 cmd.Parameters.AddWithValue("@isOwned", movie.IsOwned);
 
                 conn.Open();
-                cmd.ExecuteNonQuery();                
+                cmd.ExecuteNonQuery();
             };
 
             return movie;
@@ -129,21 +131,26 @@ namespace MovieLib.Data.Sql
 
         private Movie ReadMovie(DbDataReader reader)
         {
-            return new Movie()
+            List<Movie> movies = new List<Movie>(); 
+            while (reader.Read ())
             {
-                Id = reader.GetInt32(0),
-                Title = reader.GetString(1),    
-                Description = reader.GetString(2),
-                Length = reader.GetInt32(3),
-                IsOwned = reader.GetBoolean(4),
-                Rating = (Rating)reader.GetInt32(5),
-                ReleaseYear = (int)reader.GetInt16(6)
-            }; 
-
-
+                movies.Add(new Movie()
+                {
+                    Id = reader.IsDBNull(0) ? 0 : reader.GetInt32(0),
+                    Title = reader.GetFieldValue<string>(1),
+                    Description = reader.GetString(2),
+                    Length = reader.GetInt32(3),
+                    IsOwned = reader.GetBoolean(4),
+                    Rating = (Rating)reader.GetInt32(5),
+                    ReleaseYear = (int)reader.GetInt16(6),
+                });
+            };
+            return movies; 
         }
-
         private readonly string _connectionString;
+
         #endregion
     }
 }
+
+

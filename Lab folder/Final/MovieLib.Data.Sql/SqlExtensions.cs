@@ -53,15 +53,17 @@ namespace MovieLib.Data.Sql
         /// <returns>The result, if any.</returns>
         public static T ExecuteReaderWithSingleResult<T> ( this DbCommand source, Func<DbDataReader, T> conversionFunction )
         {
-            var items = new List<T>();
 
-            using (var reader = source.ExecuteReader())
-            {
-                if (reader.Read())
-                    return conversionFunction(reader);
-            };
+                var items = new List<T>();
 
-            return default(T);
+                using (var reader = source.ExecuteReader())
+                {
+                    if (reader.Read())
+                        return conversionFunction(reader);
+                };
+
+                return default(T);
+            
         }
 
         /// <summary>Executes a command and returns back the first result as the given type.</summary>
